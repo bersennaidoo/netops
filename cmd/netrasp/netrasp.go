@@ -28,9 +28,32 @@ func main() {
 	}
 	defer device.Close(context.Background())
 
-	output, err := device.Run(context.Background(), "show version")
-	if err != nil {
-		log.Fatalf("unable to run command: %v", err)
+	config0 := []string{
+		"enable",
+		"bersen",
+		"conf t",
+		"int loop 0",
+		"ip address 1.1.1.1 255.255.255.255",
+		"end",
 	}
-	fmt.Println(output)
+	output0, err := device.Configure(context.Background(), config0)
+	if err != nil {
+		log.Fatalf("unable to configure device: %v", err)
+	}
+	fmt.Println(output0)
+
+	config1 := []string{
+		"enable",
+		"bersen",
+		"conf t",
+		"int loop 1",
+		"ip address 2.2.2.2 255.255.255.255",
+		"end",
+	}
+	output1, err := device.Configure(context.Background(), config1)
+	if err != nil {
+		log.Fatalf("unable to configure device: %v", err)
+	}
+	fmt.Println(output1)
+
 }
