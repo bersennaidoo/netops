@@ -29,9 +29,4 @@ func main() {
 
 	log.Info("Starting the application...")
 	srv.Start()
-
-	/*output := dvc.ConfigureDevice("enable", "bersen", "conf t",
-		"int loop 1", "ip address 2.2.2.2 255.255.255.255", "end", "wr")
-
-	fmt.Println(output)*/
 }
