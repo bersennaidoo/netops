@@ -17,7 +17,8 @@ func main() {
 	filename := config.GetConfigFileName()
 	cfg := config.New(filename)
 
-	dev := cisco.CreateConfig("R2", "bersen", "bersen")
+	dev := cisco.CreateConfig(cfg.GetString("cisco.host_name"),
+		cfg.GetString("cisco.user_name"), cfg.GetString("cisco.pass_word"))
 	defer dev.Close(context.Background())
 
 	dvc := device.New(dev)

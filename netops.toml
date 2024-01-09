@@ -1,12 +1,11 @@
 ##############################################################################
 # DATABASE CONFIGURATION DATA
-[database]
+[cisco]
 
-connection_string = "root:bersen@/arcbox?parseTime=true"
-max_idle_connections = 5
-max_open_connections = 20
-connection_max_lifetime = "60s"
-driver_name = "mysql"
+host_name = "R2"
+user_name = "bersen"
+pass_word = "bersen"
+
 
 ###############################################################################
 # HTTP server configuration
