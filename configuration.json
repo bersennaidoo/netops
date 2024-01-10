@@ -1,0 +1,6 @@
+{
+    "hostname": "R2", 
+    "username": "bersen", 
+    "password": "bersen", 
+    "config": ["enable", "bersen", "sh ip int bri"]
+}
