@@ -1,48 +1,44 @@
 package handlers
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
 
 	"github.com/bersennaidoo/netops/domain/models"
-	"github.com/bersennaidoo/netops/domain/services"
 	"github.com/bersennaidoo/netops/infrastructure/device"
+	"github.com/bersennaidoo/netops/physical/cisco"
 	"github.com/kataras/golog"
 )
 
 type Handler struct {
 	log *golog.Logger
-	dev *device.Device
 }
 
-func New(log *golog.Logger, dev *device.Device) *Handler {
+func New(log *golog.Logger) *Handler {
 	return &Handler{
 		log: log,
-		dev: dev,
 	}
 }
 
 func (h *Handler) CreateConfig(w http.ResponseWriter, r *http.Request) {
-	var loopbackcmds models.LoopBackRequest
+	var configuration models.Configuration
 
 	dec := json.NewDecoder(r.Body)
 
-	err := dec.Decode(&loopbackcmds)
+	err := dec.Decode(&configuration)
 	if err != nil {
-		http.Error(w, "Could not decode", http.StatusBadRequest)
+		http.Error(w, "Internal Server Error", http.StatusBadRequest)
 		return
 	}
+	dev := cisco.CreateConfig(configuration.Hostname,
+		configuration.Username, configuration.Password)
+	defer dev.Close(context.Background())
 
-	cmd := models.CMD{}
-	cmds := cmd.CreateCMDList(loopbackcmds)
+	dvc := device.New(dev)
 
-	devconfig := services.DeviceConfiguration{
-		Cmds: cmds,
-	}
-
-	config := devconfig.CreateConfiguration()
-	output := h.dev.CreateConfig(config)
+	output := dvc.CreateConfig(configuration.Config)
 
 	fmt.Fprint(w, output)
 }

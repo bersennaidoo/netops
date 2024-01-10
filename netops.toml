@@ -1,5 +1,5 @@
 ##############################################################################
-# DATABASE CONFIGURATION DATA
+# CISCO CONFIGURATION DATA
 [cisco]
 
 host_name = "R2"
