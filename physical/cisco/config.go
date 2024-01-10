@@ -23,7 +23,7 @@ func CreateConfig(hostname string, username string, password string) netrasp.Pla
 
 	err = device.Dial(context.Background())
 	if err != nil {
-		log.Fatalf("unable to connect: %v", err)
+		log.Printf("unable to connect: %v", err)
 	}
 
 	return device

@@ -1,6 +1,6 @@
 {
-    "hostname": "R2", 
+    "hostname": "R1", 
     "username": "bersen", 
     "password": "bersen", 
-    "config": ["enable", "bersen", "sh ip int bri"]
+    "config": ["enable", "bersen", "conf t", "int s0/0", "ip add 172.16.1.1 255.255.255.192", "no shut", "end", "wr", "sh ip int bri"]
 }
