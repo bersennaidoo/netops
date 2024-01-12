@@ -92,3 +92,254 @@ net/http.(*conn).serve(0xc000132360, {0x83f3d8, 0xc00007de30})
 created by net/http.(*Server).Serve in goroutine 1
 	/usr/local/go/src/net/http/server.go:3086 +0x5cb
 
+[ERRO] 2024/01/12 17:16 runtime error: invalid memory address or nil pointer dereference
+goroutine 34 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).RecoverPanic-fm.(*Middleware).RecoverPanic.func1.1()
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:34 +0xcc
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:914 +0x21f
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Send(0xc0000dc5c0, {0x0?, 0xc000224120?}, {0x7b00c6?, 0xa5a740?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:75 +0x55
+github.com/networklore/netrasp/pkg/netrasp.ios.RunUntil({{0x83f9d0?, 0xc0000dc5c0?}}, {0x83f4f0, 0xa88d00}, {0x7b00c6?, 0x68444e?}, 0xc0000fb548?)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:91 +0x52
+github.com/networklore/netrasp/pkg/netrasp.ios.Run({{0x83f9d0?, 0xc0000dc5c0?}}, {0x83f4f0?, 0xa88d00?}, {0x7b00c6?, 0x83f9d0?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:73 +0x3a
+github.com/networklore/netrasp/pkg/netrasp.ios.Configure({{0x83f9d0?, 0xc0000dc5c0?}}, {0x83f4f0, 0xa88d00}, {0xc00007c100, 0x5, 0x1?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:28 +0x6c
+github.com/bersennaidoo/netops/infrastructure/device.(*Device).CreateConfig(0xc00001442a?, {0xc00007c100?, 0xc000014440?, 0x6?})
+	/home/bersen/go_projects/netops/infrastructure/device/cisco_device.go:22 +0x3b
+github.com/bersennaidoo/netops/application/rest/handlers.(*Handler).CreateConfig(0xc0000fb8b8?, {0x83edc8?, 0xc0001841c0}, 0xc0001a4300)
+	/home/bersen/go_projects/netops/application/rest/handlers/handlers.go:43 +0x472
+net/http.HandlerFunc.ServeHTTP(0xc00002e185?, {0x83edc8?, 0xc0001841c0?}, 0xc000061920?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).LogRequest-fm.(*Middleware).LogRequest.func1({0x83edc8, 0xc0001841c0}, 0xc0001a4300)
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:25 +0x175
+net/http.HandlerFunc.ServeHTTP(0x40ec25?, {0x83edc8?, 0xc0001841c0?}, 0x838d01?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).RecoverPanic-fm.(*Middleware).RecoverPanic.func1({0x83edc8?, 0xc0001841c0?}, 0xc00018e390?)
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:39 +0x88
+net/http.HandlerFunc.ServeHTTP(0xc0001a4200?, {0x83edc8?, 0xc0001841c0?}, 0x1?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc0000e8240, {0x83edc8, 0xc0001841c0}, 0xc0001a4100)
+	/home/bersen/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212 +0x1c5
+net/http.serverHandler.ServeHTTP({0x83da80?}, {0x83edc8?, 0xc0001841c0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc000208000, {0x83f528, 0xc0000a5dd0})
+	/usr/local/go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3086 +0x5cb
+
+[ERRO] 2024/01/12 20:56 runtime error: invalid memory address or nil pointer dereference
+goroutine 2698 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).RecoverPanic-fm.(*Middleware).RecoverPanic.func1.1()
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:34 +0xcc
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:914 +0x21f
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Send(0xc0004b21c0, {0x0?, 0xc00028a108?}, {0x7b00c6?, 0xa5a740?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:75 +0x55
+github.com/networklore/netrasp/pkg/netrasp.ios.RunUntil({{0x83f9d0?, 0xc0004b21c0?}}, {0x83f4f0, 0xa88d00}, {0x7b00c6?, 0x68444e?}, 0xc0002c1568?)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:91 +0x52
+github.com/networklore/netrasp/pkg/netrasp.ios.Run({{0x83f9d0?, 0xc0004b21c0?}}, {0x83f4f0?, 0xa88d00?}, {0x7b00c6?, 0x83f9d0?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:73 +0x3a
+github.com/networklore/netrasp/pkg/netrasp.ios.Configure({{0x83f9d0?, 0xc0004b21c0?}}, {0x83f4f0, 0xa88d00}, {0xc00013e200, 0x5, 0x1?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:28 +0x6c
+github.com/bersennaidoo/netops/infrastructure/device.(*Device).CreateConfig(0xc000014254?, {0xc00013e200?, 0xc000014256?, 0x6?})
+	/home/bersen/go_projects/netops/infrastructure/device/cisco_device.go:22 +0x3b
+github.com/bersennaidoo/netops/application/rest/handlers.(*Handler).CreateConfig(0xc0002c18b8?, {0x83edc8?, 0xc0001381c0}, 0xc0000a6300)
+	/home/bersen/go_projects/netops/application/rest/handlers/handlers.go:45 +0x435
+net/http.HandlerFunc.ServeHTTP(0xc00002e2c5?, {0x83edc8?, 0xc0001381c0?}, 0xc0004a6920?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).LogRequest-fm.(*Middleware).LogRequest.func1({0x83edc8, 0xc0001381c0}, 0xc0000a6300)
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:25 +0x175
+net/http.HandlerFunc.ServeHTTP(0x40ec25?, {0x83edc8?, 0xc0001381c0?}, 0x838d01?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).RecoverPanic-fm.(*Middleware).RecoverPanic.func1({0x83edc8?, 0xc0001381c0?}, 0xc00007ca80?)
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:39 +0x88
+net/http.HandlerFunc.ServeHTTP(0xc0000a6200?, {0x83edc8?, 0xc0001381c0?}, 0x1?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc000000300, {0x83edc8, 0xc0001381c0}, 0xc0000a6100)
+	/home/bersen/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212 +0x1c5
+net/http.serverHandler.ServeHTTP({0x83da80?}, {0x83edc8?, 0xc0001381c0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0002cc090, {0x83f528, 0xc00007de30})
+	/usr/local/go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3086 +0x5cb
+
+[ERRO] 2024/01/12 20:58 runtime error: invalid memory address or nil pointer dereference
+goroutine 2687 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).RecoverPanic-fm.(*Middleware).RecoverPanic.func1.1()
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:34 +0xcc
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:914 +0x21f
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Send(0xc0004b2740, {0x0?, 0xc00028a108?}, {0x7b00c6?, 0xa5a740?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:75 +0x55
+github.com/networklore/netrasp/pkg/netrasp.ios.RunUntil({{0x83f9d0?, 0xc0004b2740?}}, {0x83f4f0, 0xa88d00}, {0x7b00c6?, 0x68444e?}, 0xc0002c1568?)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:91 +0x52
+github.com/networklore/netrasp/pkg/netrasp.ios.Run({{0x83f9d0?, 0xc0004b2740?}}, {0x83f4f0?, 0xa88d00?}, {0x7b00c6?, 0x83f9d0?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:73 +0x3a
+github.com/networklore/netrasp/pkg/netrasp.ios.Configure({{0x83f9d0?, 0xc0004b2740?}}, {0x83f4f0, 0xa88d00}, {0xc00013f000, 0x5, 0x1?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:28 +0x6c
+github.com/bersennaidoo/netops/infrastructure/device.(*Device).CreateConfig(0xc000096478?, {0xc00013f000?, 0xc000096490?, 0x6?})
+	/home/bersen/go_projects/netops/infrastructure/device/cisco_device.go:22 +0x3b
+github.com/bersennaidoo/netops/application/rest/handlers.(*Handler).CreateConfig(0xc0002c18b8?, {0x83edc8?, 0xc0001382a0}, 0xc0000a6700)
+	/home/bersen/go_projects/netops/application/rest/handlers/handlers.go:45 +0x435
+net/http.HandlerFunc.ServeHTTP(0xc00002e605?, {0x83edc8?, 0xc0001382a0?}, 0xc0000f5920?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).LogRequest-fm.(*Middleware).LogRequest.func1({0x83edc8, 0xc0001382a0}, 0xc0000a6700)
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:25 +0x175
+net/http.HandlerFunc.ServeHTTP(0x40ec25?, {0x83edc8?, 0xc0001382a0?}, 0x838d01?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).RecoverPanic-fm.(*Middleware).RecoverPanic.func1({0x83edc8?, 0xc0001382a0?}, 0xc0001ac540?)
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:39 +0x88
+net/http.HandlerFunc.ServeHTTP(0xc0000a6300?, {0x83edc8?, 0xc0001382a0?}, 0x1?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc000000300, {0x83edc8, 0xc0001382a0}, 0xc0000a6200)
+	/home/bersen/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212 +0x1c5
+net/http.serverHandler.ServeHTTP({0x83da80?}, {0x83edc8?, 0xc0001382a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0002cc510, {0x83f528, 0xc00007de30})
+	/usr/local/go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3086 +0x5cb
+
+[ERRO] 2024/01/12 22:03 runtime error: invalid memory address or nil pointer dereference
+goroutine 19 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).RecoverPanic-fm.(*Middleware).RecoverPanic.func1.1()
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:34 +0xcc
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:914 +0x21f
+golang.org/x/crypto/ssh.(*Session).Close(...)
+	/home/bersen/go/pkg/mod/golang.org/x/crypto@v0.16.0/ssh/session.go:156
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Close(0xc0000fd080?, {0x436045?, 0xc0000fd058?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:68 +0x12
+github.com/networklore/netrasp/pkg/netrasp.ios.Close(...)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:20
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+golang.org/x/crypto/ssh.(*Session).Close(...)
+	/home/bersen/go/pkg/mod/golang.org/x/crypto@v0.16.0/ssh/session.go:156
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Close(0xc0000fd1f8?, {0x436045?, 0xc0000fd1d0?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:68 +0x12
+github.com/networklore/netrasp/pkg/netrasp.ios.Close(...)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:20
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+golang.org/x/crypto/ssh.(*Session).Close(...)
+	/home/bersen/go/pkg/mod/golang.org/x/crypto@v0.16.0/ssh/session.go:156
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Close(0xc0000fd370?, {0x436045?, 0xc0000fd348?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:68 +0x12
+github.com/networklore/netrasp/pkg/netrasp.ios.Close(...)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:20
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+golang.org/x/crypto/ssh.(*Session).Close(...)
+	/home/bersen/go/pkg/mod/golang.org/x/crypto@v0.16.0/ssh/session.go:156
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Close(0xc0000fd4e8?, {0x436045?, 0xc0000fd4c0?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:68 +0x12
+github.com/networklore/netrasp/pkg/netrasp.ios.Close(...)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:20
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+golang.org/x/crypto/ssh.(*Session).Close(...)
+	/home/bersen/go/pkg/mod/golang.org/x/crypto@v0.16.0/ssh/session.go:156
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Close(0xc0000fd648?, {0x4c8b2c?, 0x700?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:68 +0x12
+github.com/networklore/netrasp/pkg/netrasp.ios.Close(...)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:20
+github.com/bersennaidoo/netops/application/rest/handlers.(*Handler).CreateConfig(0xc0000fd8b8?, {0x83edc8?, 0xc0000ea380}, 0xc000128300)
+	/home/bersen/go_projects/netops/application/rest/handlers/handlers.go:56 +0x1ea
+net/http.HandlerFunc.ServeHTTP(0xc0000f24a5?, {0x83edc8?, 0xc0000ea380?}, 0xc0000fd920?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).LogRequest-fm.(*Middleware).LogRequest.func1({0x83edc8, 0xc0000ea380}, 0xc000128300)
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:25 +0x175
+net/http.HandlerFunc.ServeHTTP(0x40ec25?, {0x83edc8?, 0xc0000ea380?}, 0x838d01?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).RecoverPanic-fm.(*Middleware).RecoverPanic.func1({0x83edc8?, 0xc0000ea380?}, 0xc00016a0f0?)
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:39 +0x88
+net/http.HandlerFunc.ServeHTTP(0xc000128200?, {0x83edc8?, 0xc0000ea380?}, 0x1?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc0000e8240, {0x83edc8, 0xc0000ea380}, 0xc000128100)
+	/home/bersen/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212 +0x1c5
+net/http.serverHandler.ServeHTTP({0x83da80?}, {0x83edc8?, 0xc0000ea380?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0000de360, {0x83f528, 0xc0000a5e30})
+	/usr/local/go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3086 +0x5cb
+
+[ERRO] 2024/01/12 22:05 runtime error: invalid memory address or nil pointer dereference
+goroutine 6 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:24 +0x5e
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).RecoverPanic-fm.(*Middleware).RecoverPanic.func1.1()
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:34 +0xcc
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:914 +0x21f
+golang.org/x/crypto/ssh.(*Session).Close(...)
+	/home/bersen/go/pkg/mod/golang.org/x/crypto@v0.16.0/ssh/session.go:156
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Close(0xc000141080?, {0x436045?, 0xc000141058?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:68 +0x12
+github.com/networklore/netrasp/pkg/netrasp.ios.Close(...)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:20
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+golang.org/x/crypto/ssh.(*Session).Close(...)
+	/home/bersen/go/pkg/mod/golang.org/x/crypto@v0.16.0/ssh/session.go:156
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Close(0xc0001411f8?, {0x436045?, 0xc0001411d0?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:68 +0x12
+github.com/networklore/netrasp/pkg/netrasp.ios.Close(...)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:20
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+golang.org/x/crypto/ssh.(*Session).Close(...)
+	/home/bersen/go/pkg/mod/golang.org/x/crypto@v0.16.0/ssh/session.go:156
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Close(0xc000141370?, {0x436045?, 0xc000141348?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:68 +0x12
+github.com/networklore/netrasp/pkg/netrasp.ios.Close(...)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:20
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+golang.org/x/crypto/ssh.(*Session).Close(...)
+	/home/bersen/go/pkg/mod/golang.org/x/crypto@v0.16.0/ssh/session.go:156
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Close(0xc0001414e8?, {0x436045?, 0xc0001414c0?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:68 +0x12
+github.com/networklore/netrasp/pkg/netrasp.ios.Close(...)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:20
+panic({0x747900?, 0xa4b8c0?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+golang.org/x/crypto/ssh.(*Session).Close(...)
+	/home/bersen/go/pkg/mod/golang.org/x/crypto@v0.16.0/ssh/session.go:156
+github.com/networklore/netrasp/pkg/netrasp.(*sshConnection).Close(0xc000141648?, {0x4c8b2c?, 0x700?})
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ssh.go:68 +0x12
+github.com/networklore/netrasp/pkg/netrasp.ios.Close(...)
+	/home/bersen/go/pkg/mod/github.com/networklore/netrasp@v0.0.0-20210423055811-2a6631e4fc36/pkg/netrasp/ios.go:20
+github.com/bersennaidoo/netops/application/rest/handlers.(*Handler).CreateConfig(0xc0001418b8?, {0x83edc8?, 0xc0000c0000}, 0xc0000a6200)
+	/home/bersen/go_projects/netops/application/rest/handlers/handlers.go:56 +0x1ea
+net/http.HandlerFunc.ServeHTTP(0xc0000a8005?, {0x83edc8?, 0xc0000c0000?}, 0xc000141920?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).LogRequest-fm.(*Middleware).LogRequest.func1({0x83edc8, 0xc0000c0000}, 0xc0000a6200)
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:25 +0x175
+net/http.HandlerFunc.ServeHTTP(0x40ec25?, {0x83edc8?, 0xc0000c0000?}, 0x838d01?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/bersennaidoo/netops/application/rest/mid.(*Middleware).RecoverPanic-fm.(*Middleware).RecoverPanic.func1({0x83edc8?, 0xc0000c0000?}, 0xc0000981e0?)
+	/home/bersen/go_projects/netops/application/rest/mid/mid.go:39 +0x88
+net/http.HandlerFunc.ServeHTTP(0xc0000a6100?, {0x83edc8?, 0xc0000c0000?}, 0x1?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc000000300, {0x83edc8, 0xc0000c0000}, 0xc0000a6000)
+	/home/bersen/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212 +0x1c5
+net/http.serverHandler.ServeHTTP({0x83da80?}, {0x83edc8?, 0xc0000c0000?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc000132360, {0x83f528, 0xc00007de30})
+	/usr/local/go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3086 +0x5cb
+

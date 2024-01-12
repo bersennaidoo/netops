@@ -1,6 +1,10 @@
 {
-    "hostname": "R1", 
-    "username": "bersen", 
-    "password": "bersen", 
-    "config": ["enable", "bersen", "conf t", "int s0/0", "ip add 172.16.1.1 255.255.255.192", "no shut", "end", "wr", "sh ip int bri"]
+    "hostname": ["R1", "R3", "R1"], 
+    "username": ["bersen", "bersen", "bersen"], 
+    "password": ["bersen", "bersen", "bersen"], 
+    "configs": {
+        "r1": ["enable", " bersen", "conf t", "end", "sh ip int bri", "disable"],
+        "r3": ["enable", " bersen", "conf t", "end", "sh ip arp", "disable"],
+        "r11": ["enable", " bersen", "conf t", "end", "sh ip int bri", "disable"]
+    }
 }

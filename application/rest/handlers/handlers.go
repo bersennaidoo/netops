@@ -10,6 +10,7 @@ import (
 	"github.com/bersennaidoo/netops/infrastructure/device"
 	"github.com/bersennaidoo/netops/physical/cisco"
 	"github.com/kataras/golog"
+	"github.com/networklore/netrasp/pkg/netrasp"
 )
 
 type Handler struct {
@@ -24,6 +25,7 @@ func New(log *golog.Logger) *Handler {
 
 func (h *Handler) CreateConfig(w http.ResponseWriter, r *http.Request) {
 	var configuration models.Configuration
+	var output []netrasp.ConfigResult
 
 	dec := json.NewDecoder(r.Body)
 
@@ -32,13 +34,22 @@ func (h *Handler) CreateConfig(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Internal Server Error", http.StatusBadRequest)
 		return
 	}
-	dev := cisco.CreateConfig(configuration.Hostname,
-		configuration.Username, configuration.Password)
-	defer dev.Close(context.Background())
 
-	dvc := device.New(dev)
-
-	output := dvc.CreateConfig(configuration.Config)
+	for _, hname := range configuration.Hostname {
+	inner:
+		for _, uname := range configuration.Username {
+			for _, pwd := range configuration.Password {
+				dev := cisco.CreateConfig(hname, uname, pwd)
+				dvc := device.New(dev)
+				for k, config := range configuration.Configs {
+					delete(configuration.Configs, k)
+					output = append(output, dvc.CreateConfig(config))
+					break inner
+				}
+				defer dev.Close(context.Background())
+			}
+		}
+	}
 
 	fmt.Fprint(w, output)
 }
