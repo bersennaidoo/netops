@@ -5,6 +5,6 @@
     "configs": {
         "r1": ["enable", " bersen", "conf t", "end", "sh ip int bri", "disable"],
         "r3": ["enable", " bersen", "conf t", "end", "sh ip arp", "disable"],
-        "r11": ["enable", " bersen", "conf t", "end", "sh ip int bri", "disable"]
+        "r11": ["enable", " bersen", "conf t", "router ospf 1", "network 0.0.0.0 255.255.255.255 area 0", "end", "disable"]
     }
 }

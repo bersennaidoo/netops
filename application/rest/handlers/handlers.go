@@ -44,9 +44,10 @@ func (h *Handler) CreateConfig(w http.ResponseWriter, r *http.Request) {
 				for k, config := range configuration.Configs {
 					delete(configuration.Configs, k)
 					output = append(output, dvc.CreateConfig(config))
+
+					dev.Close(context.Background())
 					break inner
 				}
-				defer dev.Close(context.Background())
 			}
 		}
 	}
